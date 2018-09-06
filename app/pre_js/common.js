@@ -46,15 +46,5 @@ $(function (){
     
   }
   // END if slick
-
-
-  $(".fn__filter_only_numbers").on('keyup', function (e) {
-    var val = $(this).val();
-    if (val.match(/[^0-9]/g)) {
-        $(this).val(val.replace(/[^0-9]/g, ''));
-    }
-  });
-  
   
 });
-
