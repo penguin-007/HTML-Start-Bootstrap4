@@ -1,0 +1,91 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "mixin"
+@import "reset"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #000000
+	color: #fff
+
+body
+  overflow-x: hidden
+
+input[type="submit"]
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+input::-webkit-input-placeholder
+  color: #999999;
+input::-moz-placeholder
+  color: #999999;
+input:-moz-placeholder
+  color: #999999;
+input:-ms-input-placeholder
+  color: #999999;
+
+header, section, footer
+    position: relative
+    width: 100%
+
+input, textarea
+	border: #666 1px solid
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+span.strong
+  font-weight: bold;
+  
+/* select */
+select
+  -webkit-appearance: none
+  -moz-appearance: none 
+  -ms-appearance: none
+  -o-appearance: none
+  appearance: none
+  
+
+
+/* header
+header
+
+    
+/* footer */
+footer
+  
+  
+  
+    
+    
+/* scroll style */
+::-webkit-scrollbar-button
+  background-repeat: no-repeat
+  width: 6px; height: 0px;
+::-webkit-scrollbar-track
+  background-color: #fff;
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  background-color: #2579BF
+  background-position: center
+  background-repeat: no-repeat;
+::-webkit-resizer
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px;
+::-webkit-scrollbar
+  width: 6px;
+
+
+
+
+@import "media" // Always at the end
