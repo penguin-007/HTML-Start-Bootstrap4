@@ -64,7 +64,7 @@ function float_block(block, add_class, false_block) {
     var previous = window.scrollY;
     $(window).on('scroll', function () {
         var doc_r = $(window).scrollTop();
-        if (doc_r + block_h > block_h) {
+        if (doc_r + block_h > block_h + block_t) {
             this_b.addClass(add_class);
         } else {
             this_b.removeClass(add_class);
