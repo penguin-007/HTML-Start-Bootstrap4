@@ -6,12 +6,20 @@
     "browser-sync": "^2.11.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-cssmin": "^0.2.0",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^4.1.0",
     "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-rigger": "^0.5.8",
+    "gulp-rimraf": "^0.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^1.12.1"
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^6.0.0"
   }
 }

@@ -44,14 +44,17 @@ function parallax(e, target, mod) {
 
 
 // float_block
-function float_block(block, add_class, false_block) {
+function float_block(block, block_name, add_class, false_block, offset) {
     // param
     var this_b = $(block);
+  
+    if (!this_b.length) return;
+  
     var block_t = $(this_b).offset().top;
     var block_h = this_b.outerHeight();
     // if need false block
     if (false_block) {
-        var block_n = "float_block_" + block;
+        var block_n = "float_block_" + block_name;
         var false_b = "<div class='" + block_n + "' style='height:" + block_h + "px;' ></div>";
         this_b.wrap(false_b);
     }
@@ -64,7 +67,7 @@ function float_block(block, add_class, false_block) {
     var previous = window.scrollY;
     $(window).on('scroll', function () {
         var doc_r = $(window).scrollTop();
-        if (doc_r + block_h > block_h + block_t) {
+        if (doc_r + block_h + offset > block_h + block_t) {
             this_b.addClass(add_class);
         } else {
             this_b.removeClass(add_class);
@@ -153,8 +156,8 @@ user_phone.attr(placeholder);
 
 $(".fn__filter_only_chars").on('keyup', function (e) {
     var val = $(this).val();
-    if (val.match(/[0-9]?/g)) {
-        $(this).val(val.replace(/[0-9]?/g, ''));
+    if (val.match(/[^a-zA-ZР°-СЏРђ-РЇ ]/g)) {
+        $(this).val(val.replace(/[^a-zA-ZР°-СЏРђ-РЇ ]/g, ''));
     }
 });
 

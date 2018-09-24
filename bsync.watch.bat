@@ -1,1 +1,1 @@
-cmd /k gulp bsync:watch
+cmd /k gulp
