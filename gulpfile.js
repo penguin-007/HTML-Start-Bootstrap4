@@ -92,7 +92,7 @@
             .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //Добавим вендорные префиксы
             .pipe(gcmq())
             .pipe(cleanCSS({format: 'keep-breaks'})) //Сожмем
-            .pipe(sourceMap.write())
+            .pipe(sourceMap.write('./'))
             .pipe(gulp.dest(path.build.css)) //И в build
             .pipe(reload({stream: true}));
     });
