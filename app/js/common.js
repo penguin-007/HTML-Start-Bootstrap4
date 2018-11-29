@@ -159,10 +159,10 @@ $(function (){
 
 	$(".fn__filter_only_chars").on('keyup', function (e) {
 		var val = $(this).val();
-		if (val.match(/[^a-zA-ZР°-СЏРђ-РЇ ]/g)) {
-			$(this).val(val.replace(/[^a-zA-ZР°-СЏРђ-РЇ ]/g, ''));
+		if (val.match(/[0-9]?/g)) {
+		    $(this).val(val.replace(/[0-9]?/g, ''));
 		}
-	});
+	    });
 
 	$(".fn__filter_only_numbers").on('keyup', function (e) {
 		var val = $(this).val();
